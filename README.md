@@ -1,3 +1,6 @@
+<a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/typescript-4.5.2-blue?style=flat&logo=typescript" alt="Typescript"/></a>
+<a href="https://nodejs.org/"><img src="https://img.shields.io/badge/node.js-16-green?style=flat&logo=node-dot-js" alt="Node JS" /></a>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
