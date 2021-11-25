@@ -5,6 +5,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+--registry=https://registry.npmjs.org
+
 First, run the development server:
 
 ```bash
