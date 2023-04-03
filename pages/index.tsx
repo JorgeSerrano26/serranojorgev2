@@ -1,18 +1,24 @@
 import type { NextPage } from 'next'
-import Layout from '../components/Layout'
-import ParticlesContainer from '../components/ParticlesContainer'
-import styles from '../styles/Home.module.scss'
+import Layout from '@components/Layout'
 
 const Home: NextPage = () => {
   return <Layout>
-    <div className={styles.cajita}>
-      <div>
-        <h1 className={styles.title}>JORGE SERRANO</h1>
-        <h2 className={styles.title}>Upcoming</h2>
+    <div className="main_container">
+      <div className='container'>
+        <h1>
+          Hi, I'm <span>George</span>
+        </h1>
+        <p>
+          Software Engineer
+        </p>
       </div>
-      <ParticlesContainer />
     </div>
   </Layout>
+}
+
+export async function getServerSideProps({ req, res }: any) {
+  console.log(req.body);
+  return { props: {} }
 }
 
 export default Home

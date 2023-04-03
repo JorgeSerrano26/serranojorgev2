@@ -1,0 +1,16 @@
+.main_header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .main_nav {
+        color: #ffffff;
+    }
+}
+
+.main_nav {
+    &__children {
+        color: #ffffff;
+    }
+}

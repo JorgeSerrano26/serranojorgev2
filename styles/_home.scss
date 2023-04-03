@@ -1,0 +1,22 @@
+.main_container {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #051937, #121930, #181a29, #1b1b22, #1c1c1c);
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    font-size: 16px;
+
+    h1{
+        font-size: 6rem;
+        color: rgb(250, 250, 250);
+        font-weight: 800;
+        span{
+            color: #2c79eb;
+        }
+    }
+    p{
+        color: #c1c1c1;
+        font-weight: 600;
+    }
+}
