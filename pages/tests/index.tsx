@@ -6,7 +6,7 @@ const Home: NextPage = () => {
     return (
         <Layout>
             <div>
-                <Timeline></Timeline>
+                <Timeline />
             </div>
         </Layout>
     );

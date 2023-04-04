@@ -8,17 +8,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@nextui-org/react": "^1.0.0-beta.12",
     "next": "12.0.4",
     "path": "^0.12.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-tsparticles": "^1.37.4",
+    "react-vertical-timeline-component": "^3.6.0",
     "sass": "^1.43.5"
   },
   "devDependencies": {
     "@types/node": "16.11.10",
     "@types/react": "17.0.36",
+    "@types/react-vertical-timeline-component": "^3.3.3",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.4",
     "eslint-config-prettier": "^8.8.0",
