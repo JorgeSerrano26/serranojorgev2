@@ -1,100 +1,148 @@
+import {
+    faBriefcase,
+    faGraduationCap,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    VerticalTimeline,
+    VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
+const WorkIcon = () => null;
+const StarIcon = () => null;
+const SchoolIcon = () => (
+    <FontAwesomeIcon icon={faGraduationCap} style={{ color: '#f2f2f2' }} />
+);
+
+// #f2f2f2 blanco
+// Icon background - #212529
+
 const Timeline = () => {
     return (
-        <article className="resume" data-page="resume">
-            <header>
-                <h2 className="h2 article-title">Resume</h2>
-            </header>
-            <section className="timeline">
-                <div className="title-wrapper">
-                    <div className="icon-box">X</div>
-                    <h3 className="h3">Education</h3>
-                </div>
-                <ol className="timeline-list">
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-item-title">
-                            University school of arts
-                        </h4>
-                        <span>2007 - 2008</span>
-                        <p className="timeline-text">
-                            Nemo enims ipsam voluptatem, blanditiis praesentium
-                            voluptum delenit atque corrupti, quos dolores et
-                            quas molestias exceptur.
-                        </p>
-                    </li>
-
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-item-title">
-                            New york academy of art
-                        </h4>
-
-                        <span>2006 — 2007</span>
-
-                        <p className="timeline-text">
-                            Ratione voluptatem sequi nesciunt, facere quisquams
-                            facere menda ossimus, omnis voluptas assumenda est
-                            omnis..
-                        </p>
-                    </li>
-
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-item-title">
-                            High school of art and design
-                        </h4>
-
-                        <span>2002 — 2004</span>
-
-                        <p className="timeline-text">
-                            Duis aute irure dolor in reprehenderit in voluptate,
-                            quila voluptas mag odit aut fugit, sed consequuntur
-                            magni dolores eos.
-                        </p>
-                    </li>
-                </ol>
-            </section>
-            <section className="timeline">
-                <div className="title-wrapper">
-                    <div className="icon-box">X</div>
-                    <h3 className="h3">Experience</h3>
-                </div>
-                <ol className="timeline-list">
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-iem-title">
-                            Creative director
-                        </h4>
-                        <span>2015 - Present</span>
-                        <p className="timeline-text">
-                            Nemo enim ipsam voluptatem blanditiis praesentium
-                            voluptum delenit atque corrupti, quos dolores et
-                            qvuas molestias exceptur.
-                        </p>
-                    </li>
-
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-item-title">Art director</h4>
-
-                        <span>2013 — 2015</span>
-
-                        <p className="timeline-text">
-                            Nemo enims ipsam voluptatem, blanditiis praesentium
-                            voluptum delenit atque corrupti, quos dolores et
-                            quas molestias exceptur.
-                        </p>
-                    </li>
-
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-item-title">Web designer</h4>
-
-                        <span>2010 — 2013</span>
-
-                        <p className="timeline-text">
-                            Nemo enims ipsam voluptatem, blanditiis praesentium
-                            voluptum delenit atque corrupti, quos dolores et
-                            quas molestias exceptur.
-                        </p>
-                    </li>
-                </ol>
-            </section>
-        </article>
+        <VerticalTimeline lineColor="#f2f2f2">
+            <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentStyle={{
+                    background: '#212529',
+                    color: '#fff',
+                }}
+                contentArrowStyle={{
+                    borderRight: '7px solid #212529',
+                }}
+                date="2011 - present"
+                iconStyle={{ background: '#212529' }}
+                icon={
+                    <FontAwesomeIcon
+                        icon={faBriefcase}
+                        style={{ color: '#f2f2f2' }}
+                    />
+                }
+            >
+                <h3 className="vertical-timeline-element-title">
+                    Creative Director
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                    Miami, FL
+                </h4>
+                <p>
+                    Creative Direction, User Experience, Visual Design, Project
+                    Management, Team Leading
+                </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                date="2010 - 2011"
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                icon={<WorkIcon />}
+            >
+                <h3 className="vertical-timeline-element-title">
+                    Art Director
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                    San Francisco, CA
+                </h4>
+                <p>
+                    Creative Direction, User Experience, Visual Design, SEO,
+                    Online Marketing
+                </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                date="2008 - 2010"
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                icon={<WorkIcon />}
+            >
+                <h3 className="vertical-timeline-element-title">
+                    Web Designer
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                    Los Angeles, CA
+                </h4>
+                <p>User Experience, Visual Design</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                date="2006 - 2008"
+                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                icon={<WorkIcon />}
+            >
+                <h3 className="vertical-timeline-element-title">
+                    Web Designer
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                    San Francisco, CA
+                </h4>
+                <p>User Experience, Visual Design</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--education"
+                date="April 2013"
+                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                icon={<SchoolIcon />}
+            >
+                <h3 className="vertical-timeline-element-title">
+                    Content Marketing for Web, Mobile and Social Media
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                    Online Course
+                </h4>
+                <p>Strategy, Social Media</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--education"
+                date="November 2012"
+                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                icon={<SchoolIcon />}
+            >
+                <h3 className="vertical-timeline-element-title">
+                    Agile Development Scrum Master
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                    Certification
+                </h4>
+                <p>Creative Direction, User Experience, Visual Design</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--education"
+                date="2002 - 2006"
+                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+                icon={<SchoolIcon />}
+            >
+                <h3 className="vertical-timeline-element-title">
+                    Bachelor of Science in Interactive Digital Media Visual
+                    Imaging
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                    Bachelor Degree
+                </h4>
+                <p>Creative Direction, Visual Design</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+                iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+                icon={<StarIcon />}
+            />
+        </VerticalTimeline>
     );
 };
 
