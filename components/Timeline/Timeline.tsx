@@ -1,112 +1,74 @@
 import {
-    faBriefcase,
-    faGraduationCap,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
     VerticalTimeline,
     VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-const WorkIcon = () => null;
-const StarIcon = () => null;
-const SchoolIcon = () => (
-    <FontAwesomeIcon icon={faGraduationCap} style={{ color: '#f2f2f2' }} />
-);
+import Icons from './icons';
 
-// #f2f2f2 blanco
-// Icon background - #212529
+const colors = {
+    WHITE: '#f2f2f2',
+    BLACK: '#212529',
+};
 
-const Timeline = () => {
+export type TimeLineItem = {
+    title: string;
+    location?: string;
+    description?: string;
+    from: string;
+    to: string;
+    technologies?: string[];
+    type: keyof typeof Icons;
+};
+
+export type TimelineProps = {
+    list?: TimeLineItem[];
+};
+
+const TimeLineItemComponent = ({
+    from,
+    to,
+    type,
+    title,
+    description,
+    location,
+}: TimeLineItem): JSX.Element => {
+    const contentStlye = {
+        background: colors.BLACK,
+        color: colors.WHITE,
+    };
+
+    const contentArrowStyle = {
+        borderRight: `7px solid ${colors.BLACK}`,
+    };
+
+    const date = `${from} - ${to}`;
+
+    return (
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={contentStlye}
+            contentArrowStyle={contentArrowStyle}
+            date={date}
+            iconStyle={{ background: '#212529' }}
+            icon={Icons[type]}
+        >
+            <h3 className="vertical-timeline-element-title">{title}</h3>
+            <h4 className="vertical-timeline-element-subtitle">{location}</h4>
+            <p>{description}</p>
+        </VerticalTimelineElement>
+    );
+};
+
+const Timeline = ({ list = [] }: TimelineProps): JSX.Element => {
     return (
         <VerticalTimeline lineColor="#f2f2f2" layout="1-column-left">
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                contentStyle={{
-                    background: '#212529',
-                    color: '#f2f2f2',
-                }}
-                contentArrowStyle={{
-                    borderRight: '7px solid #212529',
-                }}
-                date="2011 - present"
-                iconStyle={{ background: '#212529' }}
-                icon={
-                    <FontAwesomeIcon
-                        icon={faBriefcase}
-                        style={{ color: '#f2f2f2' }}
-                    />
-                }
-            >
-                <h3 className="vertical-timeline-element-title">
-                    Creative Director
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                    Miami, FL
-                </h4>
-                <p>
-                    Creative Direction, User Experience, Visual Design, Project
-                    Management, Team Leading
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                date="2010 - 2011"
-                contentStyle={{
-                    background: '#212529',
-                    color: '#f2f2f2',
-                }}
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                icon={<WorkIcon />}
-            >
-                <h3 className="vertical-timeline-element-title">
-                    Art Director
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                    San Francisco, CA
-                </h4>
-                <p>
-                    Creative Direction, User Experience, Visual Design, SEO,
-                    Online Marketing
-                </p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                date="2008 - 2010"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                icon={<WorkIcon />}
-                contentStyle={{
-                    background: '#212529',
-                    color: '#f2f2f2',
-                }}
-            >
-                <h3 className="vertical-timeline-element-title">
-                    Web Designer
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                    Los Angeles, CA
-                </h4>
-                <p>User Experience, Visual Design</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-                className="vertical-timeline-element--work"
-                date="2006 - 2008"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                icon={<WorkIcon />}
-                contentStyle={{
-                    background: '#212529',
-                    color: '#f2f2f2',
-                }}
-            >
-                <h3 className="vertical-timeline-element-title">
-                    Web Designer
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                    San Francisco, CA
-                </h4>
-                <p>User Experience, Visual Design</p>
-            </VerticalTimelineElement>
+            {list.map((item, index) => (
+                <TimeLineItemComponent
+                    key={`timeline-item-${Date.now()}-${index}`}
+                    {...item}
+                />
+            ))}
         </VerticalTimeline>
     );
 };

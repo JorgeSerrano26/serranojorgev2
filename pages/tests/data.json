@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Agencia de aprendizaje a lo largo de la vidaAgencia de aprendizaje a lo largo de la vida",
+        "description": "UX/UI course.",
+        "type": "school",
+        "from": "2023",
+        "to": "2023"
+    },
+    {
+        "title": "Agencia de aprendizaje a lo largo de la vidaAgencia de aprendizaje a lo largo de la vida",
+        "description": "UX/UI course.",
+        "type": "school",
+        "from": "2023",
+        "to": "2023"
+    },
+    {
+        "title": "ORT Argentina",
+        "description": "System Analyst",
+        "type": "school",
+        "from": "2020",
+        "to": "2021"
+    },
+    {
+        "title": "TOBS",
+        "description": "System Analyst",
+        "type": "work",
+        "from": "2019",
+        "to": "2021"
+    },
+    {
+        "title": "National Technological University",
+        "description": "System engineers",
+        "type": "school",
+        "from": "2019",
+        "to": "2019"
+    },
+    {
+        "title": "Technical school ORT",
+        "description": "Technical baccalaureate with orientation in computer science and communications media, Computer Science",
+        "type": "school",
+        "from": "2014",
+        "to": "2018"
+    }
+]

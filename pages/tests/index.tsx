@@ -1,12 +1,15 @@
 import type { NextPage } from 'next';
 import Layout from '@components/Layout';
-import Timeline from '@components/Timeline/Timeline';
+import Timeline, { TimelineProps } from '@components/Timeline/Timeline';
+import data from './data.json';
+
+const list = data as TimelineProps['list'];
 
 const Home: NextPage = () => {
     return (
         <Layout>
             <div>
-                <Timeline />
+                <Timeline list={list} />
             </div>
         </Layout>
     );
