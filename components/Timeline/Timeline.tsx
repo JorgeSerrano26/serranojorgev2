@@ -1,100 +1,75 @@
-const Timeline = () => {
+import {
+    VerticalTimeline,
+    VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
+import Icons from './icons';
+
+const colors = {
+    WHITE: '#f2f2f2',
+    BLACK: '#212529',
+};
+
+export type TimeLineItem = {
+    title: string;
+    location?: string;
+    description?: string;
+    from: string;
+    to: string;
+    technologies?: string[];
+    type: keyof typeof Icons;
+};
+
+export type TimelineProps = {
+    list?: TimeLineItem[];
+};
+
+const TimeLineItemComponent = ({
+    from,
+    to,
+    type,
+    title,
+    description,
+    location,
+}: TimeLineItem): JSX.Element => {
+    const contentStlye = {
+        background: colors.BLACK,
+        color: colors.WHITE,
+    };
+
+    const contentArrowStyle = {
+        borderRight: `7px solid ${colors.BLACK}`,
+    };
+
+    const date = `${from} - ${to}`;
+
     return (
-        <article className="resume" data-page="resume">
-            <header>
-                <h2 className="h2 article-title">Resume</h2>
-            </header>
-            <section className="timeline">
-                <div className="title-wrapper">
-                    <div className="icon-box">X</div>
-                    <h3 className="h3">Education</h3>
-                </div>
-                <ol className="timeline-list">
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-item-title">
-                            University school of arts
-                        </h4>
-                        <span>2007 - 2008</span>
-                        <p className="timeline-text">
-                            Nemo enims ipsam voluptatem, blanditiis praesentium
-                            voluptum delenit atque corrupti, quos dolores et
-                            quas molestias exceptur.
-                        </p>
-                    </li>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={contentStlye}
+            contentArrowStyle={contentArrowStyle}
+            date={date}
+            iconStyle={{ background: '#212529' }}
+            icon={Icons[type]}
+        >
+            <h3 className="vertical-timeline-element-title">{title}</h3>
+            <h4 className="vertical-timeline-element-subtitle">{location}</h4>
+            <p>{description}</p>
+        </VerticalTimelineElement>
+    );
+};
 
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-item-title">
-                            New york academy of art
-                        </h4>
-
-                        <span>2006 — 2007</span>
-
-                        <p className="timeline-text">
-                            Ratione voluptatem sequi nesciunt, facere quisquams
-                            facere menda ossimus, omnis voluptas assumenda est
-                            omnis..
-                        </p>
-                    </li>
-
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-item-title">
-                            High school of art and design
-                        </h4>
-
-                        <span>2002 — 2004</span>
-
-                        <p className="timeline-text">
-                            Duis aute irure dolor in reprehenderit in voluptate,
-                            quila voluptas mag odit aut fugit, sed consequuntur
-                            magni dolores eos.
-                        </p>
-                    </li>
-                </ol>
-            </section>
-            <section className="timeline">
-                <div className="title-wrapper">
-                    <div className="icon-box">X</div>
-                    <h3 className="h3">Experience</h3>
-                </div>
-                <ol className="timeline-list">
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-iem-title">
-                            Creative director
-                        </h4>
-                        <span>2015 - Present</span>
-                        <p className="timeline-text">
-                            Nemo enim ipsam voluptatem blanditiis praesentium
-                            voluptum delenit atque corrupti, quos dolores et
-                            qvuas molestias exceptur.
-                        </p>
-                    </li>
-
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-item-title">Art director</h4>
-
-                        <span>2013 — 2015</span>
-
-                        <p className="timeline-text">
-                            Nemo enims ipsam voluptatem, blanditiis praesentium
-                            voluptum delenit atque corrupti, quos dolores et
-                            quas molestias exceptur.
-                        </p>
-                    </li>
-
-                    <li className="timeline-item">
-                        <h4 className="h4 timeline-item-title">Web designer</h4>
-
-                        <span>2010 — 2013</span>
-
-                        <p className="timeline-text">
-                            Nemo enims ipsam voluptatem, blanditiis praesentium
-                            voluptum delenit atque corrupti, quos dolores et
-                            quas molestias exceptur.
-                        </p>
-                    </li>
-                </ol>
-            </section>
-        </article>
+const Timeline = ({ list = [] }: TimelineProps): JSX.Element => {
+    return (
+        <VerticalTimeline lineColor="#f2f2f2" layout="1-column-left">
+            {list.map((item, index) => (
+                <TimeLineItemComponent
+                    key={`timeline-item-${Date.now()}-${index}`}
+                    {...item}
+                />
+            ))}
+        </VerticalTimeline>
     );
 };
 
