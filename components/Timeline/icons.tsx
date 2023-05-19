@@ -1,12 +1,7 @@
-import {
-    faBriefcase,
-    faGraduationCap,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconNotebook, IconDeviceDesktop } from '@tabler/icons-react';
 
+const color = "#f2f2f2";
 export default {
-    work: <FontAwesomeIcon icon={faBriefcase} style={{ color: '#f2f2f2' }} />,
-    school: (
-        <FontAwesomeIcon icon={faGraduationCap} style={{ color: '#f2f2f2' }} />
-    ),
+    work: <IconDeviceDesktop color={color} />,
+    school: <IconNotebook color={color} />,
 } as const;

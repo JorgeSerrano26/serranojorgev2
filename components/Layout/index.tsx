@@ -41,6 +41,7 @@ const Layout: React.FC = ({ children }) => (
                 href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&family=Source+Code+Pro:wght@600;700&display=swap"
                 rel="stylesheet"
             />
+            <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"></link>
         </Head>
         <Header />
         <main>{children}</main>
