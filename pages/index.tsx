@@ -18,7 +18,7 @@ const Home: NextPage<Props> = () => {
             <ScrollBar />
             <div className={styles.cajita}>
                 <div>
-                    <h1 className={styles.title}>JORGE SERRANO</h1>
+                    <h1 className={`${styles.title} text-6xl font-semibold mb-2`}>JORGE SERRANO</h1>
                     <Badge color="primary" variant="flat" disableOutline enableShadow>
                         DEVELOPING
                     </Badge>
