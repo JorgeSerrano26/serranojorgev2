@@ -1,6 +1,6 @@
 import type { GetServerSideProps, GetServerSidePropsContext, NextPage } from 'next';
 import Layout from '../components/Layout';
-import ParticlesContainer from '../components/ParticlesContainer';
+import ScrollBar from '@components/ScrollBar/ScrollBar';
 import styles from '../styles/Home.module.scss';
 import { Badge } from '@nextui-org/react';
 import ScrollIcon from '@components/ScrollIcon/ScrollIcon';
@@ -17,6 +17,7 @@ const Home: NextPage<Props> = ({ experience }) => {
 
     return (
         <Layout>
+            <ScrollBar />
             <div className={styles.cajita}>
                 <div>
                     <h1 className={styles.title}>JORGE SERRANO</h1>
