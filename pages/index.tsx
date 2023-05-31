@@ -4,16 +4,14 @@ import ScrollBar from '@components/ScrollBar/ScrollBar';
 import styles from '../styles/Home.module.scss';
 import { Badge } from '@nextui-org/react';
 import ScrollIcon from '@components/ScrollIcon/ScrollIcon';
-import Timeline, { TimelineProps } from '@components/Timeline/Timeline';
 import ExperienceService from 'services/ExperienceService';
 
 import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 
 type Props = {
-    experience: TimelineProps['list'];
 }
 
-const Home: NextPage<Props> = ({ experience }) => {
+const Home: NextPage<Props> = () => {
 
     return (
         <Layout>
@@ -32,13 +30,6 @@ const Home: NextPage<Props> = ({ experience }) => {
 
                 <ScrollIcon className={styles.scroll_icon_home} />
             </div>
-
-            <section className={styles.experience}>
-                <h2>Experience</h2>
-                <div>
-                    <Timeline list={experience} />
-                </div>
-            </section>
         </Layout>
     );
 };
