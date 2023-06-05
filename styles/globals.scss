@@ -1,4 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import "./commons";
+
 * {
     box-sizing: border-box;
 }
@@ -13,56 +17,9 @@ body {
     scroll-behavior: smooth;
     background-color: $js-black-2;
     color: #fff;
-    // background: linear-gradient(270deg, #6670ff, #ff6666, #82ff66, #bb66ff);
-    // background-size: 800% 800%;
-    // -webkit-animation: AnimationName 30s ease infinite;
-    // -moz-animation: AnimationName 30s ease infinite;
-    // animation: AnimationName 30s ease infinite;
 }
 
 main {
     width: 100vw;
-    height: 100vh;
-}
-
-@-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@-moz-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@keyframes AnimationName {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    min-height: 100vh;
 }
