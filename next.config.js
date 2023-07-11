@@ -19,4 +19,12 @@ module.exports = {
             },
         },
     },
+    // TODO - Implement maintenance mode
+    // redirects() {
+    //     return [
+    //       (process.env.MAINTENANCE_MODE && process.env.NODE_ENV !== "development")
+    //         ? { source: "/((?!maintenance).*)", destination: "/maintenance", permanent: false }
+    //         : null,
+    //     ].filter(Boolean);
+    //   }
 };

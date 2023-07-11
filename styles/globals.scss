@@ -5,13 +5,15 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'JetBrainsMono-VariableFont_wght';
+    font-family: 'JetBrains Mono', monospace;
+
 }
 
 html,
 body {
     padding: 0;
     margin: 0;
-    font-family: "Inter", monospace;
     width: 100%;
     height: 100%;
     scroll-behavior: smooth;

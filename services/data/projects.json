@@ -1,7 +1,7 @@
 [
     {
         "title": "Panna Helados", 
-        "image": "/panna.png",
+        "image": "panna",
         "description": "Una pagina para pedir tu helado favorito y genera un mensaje para whatsapp, que envias para hacer tu pedido",
         "productive": true,
         "altImg": "Panna Helados Web Page",
@@ -9,7 +9,7 @@
     },
     {
         "title": "Hogar Center", 
-        "image": "/hogarcenter.png",
+        "image": "hogarcenter",
         "description": "Una pagina para poder ver muebles y hacer preguntas sobre ellos",
         "productive": true,
         "altImg": "Hogar Center Web Page",
