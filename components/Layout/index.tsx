@@ -31,17 +31,7 @@ const Layout: React.FC = ({ children }) => (
             <meta name="coverage" content="Worldwide" />
             <meta name="distribution" content="Global" />
             <meta name="rating" content="General" />
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link
-                rel="preconnect"
-                href="https://fonts.gstatic.com"
-                crossOrigin="true"
-            />
-            <link
-                href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&family=Source+Code+Pro:wght@600;700&display=swap"
-                rel="stylesheet"
-            />
-            <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"></link>
+            <link rel="preload" href="/fonts/JetBrainsMono-VariableFont_wght.woff2" as="font" type="font/woff2" crossOrigin='anonymous' />
         </Head>
         <Header />
         <main>{children}</main>
