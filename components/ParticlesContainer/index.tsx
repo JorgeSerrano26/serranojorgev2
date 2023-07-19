@@ -1,8 +1,8 @@
-import Particles from 'react-tsparticles'
-import ParticlesConfig from './config';
+//import Particles from 'react-tsparticles'
 
 const ParticlesContainer = () => {
-    return <Particles id="particles" options={ParticlesConfig} /> 
-}
+	//return <Particles id="particles" options={ParticlesConfig} />;
+	return <div>Particles</div>;
+};
 
 export default ParticlesContainer;
