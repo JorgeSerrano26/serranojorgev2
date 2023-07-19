@@ -9,15 +9,8 @@ module.exports = {
 			join(__dirname, "components/*/*.scss"),
 		],
 	},
-	webpack: {
-		resolve: {
-			alias: {
-				"@components": resolve(__dirname, "components"),
-				"@config": resolve(__dirname, "config"),
-				"@hooks": resolve(__dirname, "hooks"),
-				"@utils": resolve(__dirname, "utils"),
-			},
-		},
+	experimental: {
+		appDir: true,
 	},
 	// TODO - Implement maintenance mode
 	// redirects() {
