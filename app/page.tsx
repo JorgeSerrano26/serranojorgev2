@@ -1,9 +1,8 @@
 import FloatingMenu from "@components/FloatingMenu/FloatingMenu";
 import ScrollIcon from "@components/ScrollIcon/ScrollIcon";
-import type { NextPage } from "next";
 import Image from "next/legacy/image";
 
-const Home: NextPage = () => {
+const Home = () => {
 	return (
 		<main>
 			<FloatingMenu
