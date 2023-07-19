@@ -31,7 +31,7 @@ const MenuItem = ({
 	const Icon = Icons[icon];
 
 	const styles = classNames(
-		"flex flex-col p-2 flex bg-gray-50",
+		"flex flex-col p-2 flex bg-gray-50 flex justify-center items-center text-center",
 		{ "cursor-not-allowed text-gray-300 pointer-events-none": disabled },
 		{
 			"text-gray-900 hover:text-gray-50 hover:bg-gray-900 transition duration-300 ease-in-out":

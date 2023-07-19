@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Scrollbar CSS ===== */
+
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ce19fb #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ce19fb;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CA19F9;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #df6aff;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #df6aff;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+    background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* ===== Custom CSS ===== */
+* {
+    box-sizing: border-box;
+    font-family: 'JetBrainsMono-VariableFont_wght';
+    font-family: 'JetBrains Mono', monospace;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
