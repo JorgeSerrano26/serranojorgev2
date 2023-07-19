@@ -4,7 +4,7 @@ import ScrollIcon from "@components/ScrollIcon/ScrollIcon";
 import { Badge } from "@nextui-org/react";
 import styles from "@styles/Home.module.scss";
 import type { GetServerSideProps, NextPage } from "next";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import ExperienceService, {
 	Experience,
 	Project,
