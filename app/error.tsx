@@ -5,6 +5,7 @@ type Props = {
 	error: Error;
 	reset: () => void;
 };
+
 export default function ErrorPage({ error, reset }: Props) {
 	useEffect(() => {
 		// Log the error to an error reporting service
