@@ -1,37 +1,46 @@
 [
     {
         "title": "Mercado Libre SLA",
-        "description": "Software Ingenier",
+        "description": "My responsibilities include facilitating effective communication between teams, ensuring smooth and aligned collaboration on projects. I am also responsible for the development of solutions on both the backend and frontend, ensuring that the products are complete and functional. In addition, I assume the role of coordinating initiatives and carrying them out, efficiently managing tasks to meet the established objectives.",
         "type": "work",
-        "from": "2021",
-        "to": "Current"
+        "from": "06-01-2021",
+        "to": "today",
+        "position": "Software Engineer"
     },
     {
-        "title": "ORT Argentina",
-        "description": "System Analyst",
+        "title": "Private programming teacher",
+        "description": "As a private programming tutor, my responsibility is to provide personalized and well-structured classes, with didactic material that allows students to learn and understand the topics addressed in an effective way. ",
+        "type": "work",
+        "from": "01-01-2020",
+        "to": "today"
+    },
+    {
+        "title": "ORT Argentina - System Analyst",
+        "description": "Systems analysts are dedicated to study, design and develop technological solutions to improve business processes, creating efficient information systems based on the needs of the organization.",
         "type": "school",
-        "from": "2020",
-        "to": "2021"
+        "from": "03-01-2020",
+        "to": "12-01-2021"
     },
     {
         "title": "TOBS",
-        "description": "System Analyst",
+        "description": "In my role at the company, I worked as a fullstack developer, assuming various responsibilities that included the creation and maintenance of services implemented in technologies such as PHP, HTML, CSS, React and Node.",
         "type": "work",
-        "from": "2019",
-        "to": "2021"
+        "from": "11-10-2019",
+        "to": "01-06-2021",
+        "position": "Jr. Full Stack Developer"
     },
     {
-        "title": "National Technological University",
-        "description": "System engineers",
+        "title": "National Technological University - Systems Engineering",
+        "description": "The Systems Engineering program focuses on the design, development and maintenance of computer systems. Systems engineers are experts in programming, databases, networks and computer security. Their objective is to create efficient technological solutions adapted to the needs of companies and organizations.",
         "type": "school",
-        "from": "2019",
-        "to": "2019"
+        "from": "03-01-2019",
+        "to": "06-01-2019"
     },
     {
         "title": "Technical school ORT",
         "description": "Technical baccalaureate with orientation in computer science and communications media, Computer Science",
         "type": "school",
-        "from": "2014",
-        "to": "2018"
+        "from": "01-01-2014",
+        "to": "12-31-2018"
     }
 ]

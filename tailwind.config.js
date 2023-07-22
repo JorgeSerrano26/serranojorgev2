@@ -12,6 +12,5 @@ module.exports = {
 			mono: ['"JetBrains Mono"', "monospace"],
 		},
 	},
-
 	plugins: [],
 };

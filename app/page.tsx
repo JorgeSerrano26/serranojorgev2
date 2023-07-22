@@ -1,8 +1,17 @@
 import FloatingMenu from "@components/FloatingMenu/FloatingMenu";
 import ScrollIcon from "@components/ScrollIcon/ScrollIcon";
+import Timeline from "@components/Timeline/Timeline";
+import type { NextPage } from "next";
 import Image from "next/legacy/image";
+import ExperienceService from "services/ExperienceService";
 
-const Home = () => {
+const getData = () => {
+	return ExperienceService.getExperience();
+};
+
+const Home: NextPage = async () => {
+	const dataExperience = await getData();
+
 	return (
 		<main>
 			<FloatingMenu
@@ -34,7 +43,7 @@ const Home = () => {
 				</div>
 				<ScrollIcon className="top-[99%] translate-y-[-50%]" />
 			</div>
-			<div className="relative hidden md:block h-[1000px]">
+			<div className="relative hidden md:block">
 				<div className="absolute left-0 top-[-400px]">
 					<Image src="/home-purple.svg" priority width={271} height={688} />
 				</div>
@@ -42,6 +51,18 @@ const Home = () => {
 					<Image src="/home-green.svg" width={271} priority height={688} />
 				</div>
 			</div>
+			{/* Experience */}
+			<section
+				id="experience"
+				className="w-[70%] md:w-60% max-w-screen-md m-auto pt-20 pb-20"
+			>
+				<div className="text-center">
+					<h1 className="inline-block z-10 relative text-4xl font-semibold mb-10 after:content-[''] after:w-full after:h-3 after:block after:absolute after:bg-fuchsia-500 after:top-[75%] after:z-[-1]">
+						Experience
+					</h1>
+				</div>
+				<Timeline items={dataExperience} />
+			</section>
 		</main>
 	);
 };
