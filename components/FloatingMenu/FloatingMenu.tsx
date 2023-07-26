@@ -2,6 +2,7 @@ import {
 	IconBrandGithub,
 	IconBrandLinkedin,
 	IconBrandTwitch,
+	IconFileCv,
 } from "@tabler/icons-react";
 import classNames from "classnames";
 
@@ -10,9 +11,10 @@ type Item = {
 	ariaLabel?: string;
 	href: string;
 	disabled?: boolean;
+	donwload?: boolean;
 };
 
-type FloatingMenuProps = {
+export type FloatingMenuProps = {
 	items: Item[];
 };
 
@@ -20,6 +22,7 @@ const Icons = {
 	github: IconBrandGithub,
 	linkedin: IconBrandLinkedin,
 	twitch: IconBrandTwitch,
+	download: IconFileCv,
 };
 
 const MenuItem = ({
@@ -27,8 +30,9 @@ const MenuItem = ({
 	ariaLabel = "",
 	href,
 	disabled = false,
+	donwload = false,
 }: Item): JSX.Element => {
-	const Icon = Icons[icon];
+	const Icon = Icons[icon] ?? undefined;
 
 	const styles = classNames(
 		"flex flex-col p-2 flex bg-gray-50 flex justify-center items-center text-center",
@@ -46,8 +50,9 @@ const MenuItem = ({
 			href={href}
 			rel="noreferrer"
 			target="_blank"
+			download={donwload}
 		>
-			{<Icon />}
+			{Icon && <Icon />}
 			{disabled && (
 				<span className="text-xs" aria-label={ariaLabel}>
 					soon
@@ -59,7 +64,7 @@ const MenuItem = ({
 
 const FloatingMenu = ({ items }: FloatingMenuProps): JSX.Element => {
 	return (
-		<div className="flex flex-col overflow-hidden z-30 left-3 w-18 bg-gray-50 rounded-md justify-center align-middle fixed top-[50%] translate-y-[-50%] shadow-md ">
+		<div className="flex flex-col overflow-hidden z-30 w-18 bg-gray-50 rounded-r-md justify-center align-middle fixed top-[50%] translate-y-[-50%] shadow-md ">
 			{items.map((el, index) => {
 				return <MenuItem key={`floating-menu-item-${index}`} {...el} />;
 			})}

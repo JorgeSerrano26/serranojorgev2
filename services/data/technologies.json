@@ -1,0 +1,66 @@
+{
+	"learned": [
+		{
+			"name": "Javascript",
+			"logo": "javascript.svg"
+		},
+		{
+			"name": "Typescript",
+			"logo": "typescript.svg"
+		},
+		{
+			"name": "Jest",
+			"logo": "jest.svg"
+		},
+		{
+			"name": "HTML",
+			"logo": "html.svg"
+		},
+		{
+			"name": "SCSS",
+			"logo": "sass.svg"
+		},
+		{
+			"name": "React",
+			"logo": "react.svg"
+		},
+		{
+			"name": "Next",
+			"logo": "nextjs.svg"
+		},
+		{
+			"name": "Node",
+			"logo": "node.svg"
+		},
+		{
+			"name": "Express",
+			"logo": "express.svg"
+		},
+		{
+			"name": "Github",
+			"logo": "github.svg"
+		}
+	],
+	"learning": [
+		{
+			"name": "NestJS",
+			"logo": "nestjs.svg"
+		},
+		{
+			"name": "Golang",
+			"logo": "golang.svg"
+		},
+		{
+			"name": "Java",
+			"logo": "java.svg"
+		},
+		{
+			"name": "Kotlin",
+			"logo": "kotlin.svg"
+		},
+		{
+			"name": "Tailwind",
+			"logo": "tailwind.svg"
+		}
+	]
+}
