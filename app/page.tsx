@@ -83,7 +83,7 @@ const Home: NextPage = async () => {
 								return (
 									<div
 										key={`tech-${index}-${tech.name}`}
-										className="flex group relative p-2  rounded-full bg-slate-50 max-w-[50px] h-[50px] flex-shrink-0 flex-grow-0 flex-auto w-auto justify-center items-center text-base font-bold"
+										className="flex group relative p-2  rounded-full bg-slate-50 max-w-[50px] h-[50px] flex-shrink-0 flex-grow-0 flex-auto w-full justify-center items-center text-base font-bold"
 									>
 										<img
 											className="w-full rounded-md"

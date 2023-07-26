@@ -2,65 +2,65 @@
 	"learned": [
 		{
 			"name": "Javascript",
-			"logo": "javascript.svg"
+			"logo": "javascript.webp"
 		},
 		{
 			"name": "Typescript",
-			"logo": "typescript.svg"
+			"logo": "typescript.webp"
 		},
 		{
 			"name": "Jest",
-			"logo": "jest.svg"
+			"logo": "jest.webp"
 		},
 		{
 			"name": "HTML",
-			"logo": "html.svg"
+			"logo": "html.webp"
 		},
 		{
 			"name": "SCSS",
-			"logo": "sass.svg"
+			"logo": "sass.webp"
 		},
 		{
 			"name": "React",
-			"logo": "react.svg"
+			"logo": "react.webp"
 		},
 		{
 			"name": "Next",
-			"logo": "nextjs.svg"
+			"logo": "nextjs.webp"
 		},
 		{
 			"name": "Node",
-			"logo": "node.svg"
+			"logo": "node.webp"
 		},
 		{
 			"name": "Express",
-			"logo": "express.svg"
+			"logo": "express.webp"
 		},
 		{
 			"name": "Github",
-			"logo": "github.svg"
+			"logo": "github.webp"
 		}
 	],
 	"learning": [
 		{
 			"name": "NestJS",
-			"logo": "nestjs.svg"
+			"logo": "nestjs.webp"
 		},
 		{
 			"name": "Golang",
-			"logo": "golang.svg"
+			"logo": "golang.webp"
 		},
 		{
 			"name": "Java",
-			"logo": "java.svg"
+			"logo": "java.webp"
 		},
 		{
 			"name": "Kotlin",
-			"logo": "kotlin.svg"
+			"logo": "kotlin.webp"
 		},
 		{
 			"name": "Tailwind",
-			"logo": "tailwind.svg"
+			"logo": "tailwind.webp"
 		}
 	]
 }
