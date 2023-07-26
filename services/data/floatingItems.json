@@ -18,6 +18,7 @@
 	{
 		"href": "/jorge_serrano_cv.pdf",
 		"icon": "download",
-		"ariaLabel": "download jorge serrano cv"
+		"ariaLabel": "download jorge serrano cv",
+		"download": true
 	}
 ]

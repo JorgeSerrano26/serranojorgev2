@@ -11,7 +11,7 @@ type Item = {
 	ariaLabel?: string;
 	href: string;
 	disabled?: boolean;
-	donwload?: boolean;
+	download?: boolean;
 };
 
 export type FloatingMenuProps = {
@@ -30,7 +30,7 @@ const MenuItem = ({
 	ariaLabel = "",
 	href,
 	disabled = false,
-	donwload = false,
+	download = false,
 }: Item): JSX.Element => {
 	const Icon = Icons[icon] ?? undefined;
 
@@ -49,8 +49,8 @@ const MenuItem = ({
 			aria-label={ariaLabel}
 			href={href}
 			rel="noreferrer"
-			target="_blank"
-			download={donwload}
+			target={download ? "_self" : "_blank"}
+			download={download}
 		>
 			{Icon && <Icon />}
 			{disabled && (
