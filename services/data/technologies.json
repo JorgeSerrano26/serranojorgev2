@@ -25,15 +25,15 @@
 			"logo": "react.webp"
 		},
 		{
-			"name": "Next",
+			"name": "Next JS",
 			"logo": "nextjs.webp"
 		},
 		{
-			"name": "Node",
+			"name": "Node JS",
 			"logo": "node.webp"
 		},
 		{
-			"name": "Express",
+			"name": "Express JS",
 			"logo": "express.webp"
 		},
 		{
@@ -43,7 +43,7 @@
 	],
 	"learning": [
 		{
-			"name": "NestJS",
+			"name": "Nest JS",
 			"logo": "nestjs.webp"
 		},
 		{

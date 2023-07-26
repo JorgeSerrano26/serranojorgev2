@@ -83,15 +83,17 @@ const Home: NextPage = async () => {
 								return (
 									<div
 										key={`tech-${index}-${tech.name}`}
-										className="flex group relative p-2  rounded-full bg-slate-50 max-w-[50px] h-[50px] flex-shrink-0 flex-grow-0 flex-auto w-full justify-center items-center text-base font-bold"
+										className="flex group relative p-2 rounded-full bg-slate-50 w-[50px] h-[50px] flex-shrink-0 flex-grow-0 flex-auto  justify-center items-center text-base font-bold"
 									>
 										<img
 											className="w-full rounded-md"
 											alt={`${tech.name} logo`}
 											src={`/logos/${tech.logo}`}
 											fetchPriority="low"
+											width={50}
+											height={50}
 										/>
-										<div className="absolute top-[110%] transform-translate-x-1/2 px-2 py-1 bg-gray-50 text-gray-800 text-sm rounded opacity-0 group-hover:opacity-100">
+										<div className="absolute top-[110%] z-10 shadow transform-translate-x-1/2 px-2 py-1 bg-gray-50 text-gray-800 text-sm rounded opacity-0 group-hover:opacity-100">
 											{tech.name}
 										</div>
 									</div>
@@ -111,15 +113,17 @@ const Home: NextPage = async () => {
 								return (
 									<div
 										key={`tech-${index}-${tech.name}`}
-										className="flex p-2 relative group rounded-full bg-slate-50 max-w-[50px] h-[50px] flex-shrink-0 flex-grow-0 flex-auto w-auto justify-center items-center text-base font-bold"
+										className="flex p-2 relative group rounded-full bg-slate-50 w-[50px] h-[50px] flex-shrink-0 flex-grow-0 flex-auto justify-center items-center text-base font-bold"
 									>
 										<img
 											className="w-full h-fit"
 											alt={`${tech.name} logo`}
 											src={`/logos/${tech.logo}`}
 											fetchPriority="low"
+											width={50}
+											height={50}
 										/>
-										<div className="absolute top-[110%] transform-translate-x-1/2 px-2 py-1 bg-gray-50 text-gray-800 text-sm rounded opacity-0 group-hover:opacity-100">
+										<div className="absolute top-[110%] z-10 shadow transform-translate-x-1/2 px-2 py-1 bg-gray-50 text-gray-800 text-sm rounded opacity-0 group-hover:opacity-100">
 											{tech.name}
 										</div>
 									</div>
