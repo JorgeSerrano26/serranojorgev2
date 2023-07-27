@@ -10,6 +10,7 @@ import ExperienceService from "services/ExperienceService";
 
 import { IconDownload } from "@tabler/icons-react";
 
+import Techonologies from "@components/Technologies/Techonologies";
 import floatingsItems from "services/data/floatingItems.json";
 import techonologies from "services/data/technologies.json";
 
@@ -86,69 +87,7 @@ const Home: NextPage = async () => {
 			</Section>
 			{/* Technologies */}
 			<Section id="technologies" title="Technologies">
-				<div className="mt-10 p-5 shadow-lg shadow-gray rounded-md bg-gray-700 border-gray-600">
-					<div className="mb-10">
-						<h3 className="font-bold mb-5">
-							<span role="img" aria-label="rocket emoji">
-								🚀
-							</span>
-							Learned
-						</h3>
-
-						<div className="flex w-auto flex-wrap gap-5">
-							{techonologies.learned.map((tech, index) => {
-								return (
-									<div
-										key={`tech-${index}-${tech.name}`}
-										className="flex group relative p-2 rounded-full bg-slate-50 w-[50px] h-[50px] flex-shrink-0 flex-grow-0 flex-auto  justify-center items-center text-base font-bold"
-									>
-										<img
-											className="w-full rounded-md"
-											alt={`${tech.name} logo`}
-											src={`/logos/${tech.logo}`}
-											fetchPriority="low"
-											width={50}
-											height={50}
-										/>
-										<div className="absolute top-[110%] w-max z-10 shadow transform-translate-x-1/2 px-2 py-1 bg-gray-50 text-gray-800 text-sm rounded opacity-0 group-hover:opacity-100">
-											{tech.name}
-										</div>
-									</div>
-								);
-							})}
-						</div>
-					</div>
-					<div>
-						<h3 className="font-bold mb-5">
-							<span role="img" aria-label="Nerd Face emoji">
-								🤓
-							</span>
-							Learning
-						</h3>
-						<div className="flex w-auto flex-wrap gap-5">
-							{techonologies.learning.map((tech, index) => {
-								return (
-									<div
-										key={`tech-${index}-${tech.name}`}
-										className="flex p-2 relative group rounded-full bg-slate-50 w-[50px] h-[50px] flex-shrink-0 flex-grow-0 flex-auto justify-center items-center text-base font-bold"
-									>
-										<img
-											className="w-full h-fit"
-											alt={`${tech.name} logo`}
-											src={`/logos/${tech.logo}`}
-											fetchPriority="low"
-											width={50}
-											height={50}
-										/>
-										<div className="absolute top-[110%] w-max z-10 shadow transform-translate-x-1/2 px-2 py-1 bg-gray-50 text-gray-800 text-sm rounded opacity-0 group-hover:opacity-100">
-											{tech.name}
-										</div>
-									</div>
-								);
-							})}
-						</div>
-					</div>
-				</div>
+				<Techonologies {...techonologies} />
 			</Section>
 		</main>
 	);

@@ -39,6 +39,14 @@
 		{
 			"name": "Github",
 			"logo": "github.webp"
+		},
+		{
+			"name": "React Testing Library",
+			"logo": "react-testing.webp"
+		},
+		{
+			"name": "React Redux",
+			"logo": "redux.webp"
 		}
 	],
 	"learning": [

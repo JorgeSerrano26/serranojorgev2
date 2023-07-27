@@ -8,7 +8,7 @@ type TimeLineComponent = (props: TimelineProps) => JSX.Element;
 
 const Timeline: TimeLineComponent = ({ items }) => {
 	return (
-		<ol className="relative border-l border-gray-200 dark:border-gray-700">
+		<ol className="relative border-l border-gray-700">
 			{items.map((item, index) => {
 				const from = new Date(item.from);
 				const today = item.to === "today";
@@ -21,22 +21,22 @@ const Timeline: TimeLineComponent = ({ items }) => {
 						key={`timeline-item-${index}`}
 						className="ml-6 [&:not(:last-child)]:mb-10"
 					>
-						<span className="absolute p-0.5 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+						<span className="absolute p-0.5 flex items-center justify-center w-6 h-6 rounded-full -left-3 ring-8 ring-gray-900 bg-blue-900">
 							{isWork ? (
 								<IconDeviceLaptop color="#93c4fd" />
 							) : (
 								<IconSchool color="#93c4fd" />
 							)}
 						</span>
-						<h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+						<h3 className="flex items-center mb-1 text-lg font-semibold text-white">
 							{item.title}{" "}
 							{isLatest && (
-								<span className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">
+								<span className="text-sm font-medium mr-2 px-2.5 py-0.5 rounded bg-blue-900 text-blue-300 ml-3">
 									Latest
 								</span>
 							)}
 						</h3>
-						<time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+						<time className="block mb-2 text-sm font-normal leading-none text-gray-500">
 							{from.getFullYear()} - {today ? "Today" : to.getFullYear()}
 						</time>
 						{isWork && item.position && (
@@ -44,7 +44,7 @@ const Timeline: TimeLineComponent = ({ items }) => {
 								{item.position}
 							</p>
 						)}
-						<p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+						<p className="mb-4 text-base font-normal text-gray-300">
 							{item.description}
 						</p>
 					</li>
