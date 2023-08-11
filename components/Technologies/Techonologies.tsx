@@ -44,7 +44,14 @@ const TechItem = ({ name, logo }: Tech) => {
 
 const Techonologies = ({ learned, learning }: Props) => {
 	return (
-		<div className="mt-10 p-5 shadow-lg shadow-gray rounded-md bg-gray-700 border-gray-600">
+		<div className="mt-10 p-5 shadow-sm shadow-slate-700 rounded-xl bg-gray-700 border-gray-600 relative">
+			<img
+				src="/rocket.png"
+				alt=""
+				className="absolute top-0 right-0 translate-x-[50%] translate-y-[-50%]"
+				width={100}
+				height={100}
+			/>
 			{learned && (
 				<div className="mb-10">
 					<TechTitle icon="🚀">Learned</TechTitle>

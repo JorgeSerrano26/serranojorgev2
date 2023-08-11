@@ -44,7 +44,7 @@ const Timeline: TimeLineComponent = ({ items }) => {
 								{item.position}
 							</p>
 						)}
-						<p className="mb-4 text-base font-normal text-gray-300">
+						<p className="mb-4 text-base font-normal text-gray-300 mt-4">
 							{item.description}
 						</p>
 					</li>
