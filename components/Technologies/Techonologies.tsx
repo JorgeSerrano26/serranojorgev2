@@ -51,6 +51,7 @@ const Techonologies = ({ learned, learning }: Props) => {
 				className="absolute top-0 right-0 translate-x-[50%] translate-y-[-50%]"
 				width={100}
 				height={100}
+				fetchPriority="low"
 			/>
 			{learned && (
 				<div className="mb-10">

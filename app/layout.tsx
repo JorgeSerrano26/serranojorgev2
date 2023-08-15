@@ -1,4 +1,5 @@
 import Footer from "@components/Footer";
+import ScrollToTop from "@components/ScrollToTop/ScrollToTop";
 import { Metadata } from "next";
 import Head from "next/head";
 import "./globals.scss";
@@ -49,9 +50,10 @@ export default function RootLayout({
 					sizes="180x180"
 				/>
 			</Head>
-			<body>
+			<body className="relative">
 				{children}
 				<Footer />
+				<ScrollToTop />
 			</body>
 		</html>
 	);

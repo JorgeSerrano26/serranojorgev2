@@ -7,7 +7,14 @@ module.exports = {
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			letterSpacing: {
+				1: "-0.10em",
+			},
+			textColor: {
+				pinky: "#D4ADFC",
+			},
+		},
 		fontFamily: {
 			mono: ['"JetBrains Mono"', "monospace"],
 		},

@@ -1,4 +1,3 @@
-import Alert from "@components/Alert";
 import FloatingMenu, {
 	type FloatingMenuProps,
 } from "@components/FloatingMenu/FloatingMenu";
@@ -24,7 +23,7 @@ const Home: NextPage = async () => {
 	return (
 		<main>
 			<FloatingMenu items={floatingsItems as FloatingMenuProps["items"]} />
-			<div id="home" className="top-0 left-0 w-100 h-screen pt-20">
+			<div id="home" className="top-0 left-0 w-100 h-screen pt-20 relative">
 				<div className="container m-auto grid grid-rows-3 md:grid-rows-1 grid-cols-1 md:grid-cols-2 place-items-center ">
 					{/* INFO */}
 					<div className="grid grid-rows-2 md:grid-rows-3 col-start-1">
@@ -32,7 +31,6 @@ const Home: NextPage = async () => {
 							<h1 className="text-6xl font-semibold mb-2 d-inline text-center">
 								JORGE SERRANO
 							</h1>
-							<Alert />
 							<div className="flex justify-center mt-10">
 								<a
 									href="/jorge_serrano_cv.pdf"
