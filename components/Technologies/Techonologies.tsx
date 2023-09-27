@@ -1,3 +1,5 @@
+import styles from "./styles.module.scss";
+
 type Tech = {
 	name: string;
 	logo: string;
@@ -24,7 +26,7 @@ const TechTitle = ({
 
 const TechItem = ({ name, logo }: Tech) => {
 	return (
-		<div className="relative group">
+		<div className="relative flex justify-center">
 			<div className="flex hover:scale-110 duration-100 z-0 relative p-2 rounded-full bg-slate-50 w-[50px] h-[50px] flex-shrink-0 flex-grow-0 flex-auto  justify-center items-center">
 				<img
 					className="w-full rounded-md"
@@ -44,7 +46,7 @@ const TechItem = ({ name, logo }: Tech) => {
 
 const Techonologies = ({ learned, learning }: Props) => {
 	return (
-		<div className="mt-10 p-5 shadow-sm shadow-slate-700 rounded-xl bg-gray-700 border-gray-600 relative">
+		<div className={`${styles.technologies} mt-10 p-5 rounded-xl relative`}>
 			<img
 				src="/rocket.png"
 				alt=""
@@ -56,8 +58,7 @@ const Techonologies = ({ learned, learning }: Props) => {
 			{learned && (
 				<div className="mb-10">
 					<TechTitle icon="🚀">Learned</TechTitle>
-
-					<div className="flex w-auto flex-wrap gap-5 gap-y-10">
+					<div className={styles.tech_container}>
 						{learned.map((tech, index) => {
 							const key = `tech-${index}-${tech.name}`;
 							return <TechItem key={key} {...tech} />;
@@ -68,7 +69,7 @@ const Techonologies = ({ learned, learning }: Props) => {
 			{learning && (
 				<div>
 					<TechTitle icon="🤓">Learning</TechTitle>
-					<div className="flex w-auto flex-wrap gap-5 gap-y-10">
+					<div className={styles.tech_container}>
 						{learning.map((tech, index) => {
 							const key = `tech-${index}-${tech.name}`;
 							return <TechItem key={key} {...tech} />;

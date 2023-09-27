@@ -1,0 +1,16 @@
+.technologies {
+    background: #2c2c2c;
+    background: -webkit-linear-gradient(0deg, #2c2c2c 0%, #4c4c4c 100%);
+    background: linear-gradient(0deg, #2c2c2c 0%, #4c4c4c 100%);
+
+    -webkit-box-shadow: 0 0 18.5px -17.5px #f0f0f0;
+    -moz-box-shadow: 0 0 18.5px -17.5px #f0f0f0;
+    box-shadow: 0 0 18.5px -17.5px #f0f0f0;
+}
+
+.tech_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+}

@@ -68,7 +68,7 @@ const Home: NextPage = async () => {
 						alt="Home purple XPR home"
 					/>
 				</div>
-				<div className=" absolute right-0">
+				<div className="absolute right-0 opacity-40">
 					<img
 						src="/home-green.svg"
 						width={271}
