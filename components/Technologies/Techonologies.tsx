@@ -26,7 +26,7 @@ const TechTitle = ({
 
 const TechItem = ({ name, logo }: Tech) => {
 	return (
-		<div className="relative flex justify-center">
+		<div className="relative group flex justify-center">
 			<div className="flex hover:scale-110 duration-100 z-0 relative p-2 rounded-full bg-slate-50 w-[50px] h-[50px] flex-shrink-0 flex-grow-0 flex-auto  justify-center items-center">
 				<img
 					className="w-full rounded-md"
