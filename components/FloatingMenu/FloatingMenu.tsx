@@ -12,6 +12,7 @@ type Item = {
 	href: string;
 	disabled?: boolean;
 	download?: boolean;
+	color?: string;
 };
 
 export type FloatingMenuProps = {
@@ -31,13 +32,14 @@ const MenuItem = ({
 	href,
 	disabled = false,
 	download = false,
+	color,
 }: Item): JSX.Element => {
 	const Icon = Icons[icon] ?? undefined;
 
 	const styles = classNames(
 		"flex flex-col p-2 flex bg-gray-50 flex justify-center items-center text-center",
-		{ "cursor-not-allowed text-gray-300 pointer-events-none": disabled },
 		{
+			"cursor-not-allowed text-gray-300 pointer-events-none": disabled,
 			"text-gray-900 hover:text-gray-50 hover:bg-gray-900 transition duration-300 ease-in-out":
 				!disabled,
 		},
@@ -52,7 +54,7 @@ const MenuItem = ({
 			target={download ? "_self" : "_blank"}
 			download={download}
 		>
-			{Icon && <Icon />}
+			{Icon && <Icon color={color} />}
 			{disabled && (
 				<span className="text-xs" aria-label={ariaLabel}>
 					soon

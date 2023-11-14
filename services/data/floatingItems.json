@@ -5,14 +5,16 @@
 		"ariaLabel": "link to jorge serrano github"
 	},
 	{
-		"href": "twitch.tv/jorgeserrdev",
+		"href": "https://twitch.tv/jorgeserrdev",
 		"icon": "twitch",
-		"ariaLabel": "link to jorge serrano twitch"
+		"ariaLabel": "link to jorge serrano twitch",
+		"color": "#6034b2"
 	},
 	{
 		"href": "https://www.linkedin.com/in/jorge-serrano-a6b627162/",
 		"icon": "linkedin",
-		"ariaLabel": "link to jorge serrano linkedin"
+		"ariaLabel": "link to jorge serrano linkedin",
+		"color": "#0072b1"
 	},
 	{
 		"href": "/jorge_serrano_cv.pdf",
