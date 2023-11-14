@@ -5,10 +5,9 @@
 		"ariaLabel": "link to jorge serrano github"
 	},
 	{
-		"href": "twitch.tv/jorgeserrano",
+		"href": "twitch.tv/jorgeserrdev",
 		"icon": "twitch",
-		"ariaLabel": "link to jorge serrano twitch",
-		"disabled": true
+		"ariaLabel": "link to jorge serrano twitch"
 	},
 	{
 		"href": "https://www.linkedin.com/in/jorge-serrano-a6b627162/",
