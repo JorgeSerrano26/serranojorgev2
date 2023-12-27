@@ -1,6 +1,5 @@
 ---
 import Footer from "../components/Footer.astro";
-import SctrollToTop from "../components/SctrollToTop.astro";
 import "../styles/base.scss";
 
 type Props = {
@@ -16,7 +15,7 @@ const pageTitle = title ?? "Jorge Serrano - Software Engineer";
     <head>
         <meta charset="utf-8" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="generator" content={Astro.generator} />
         <meta name="title" content={pageTitle} />
         <meta
@@ -46,8 +45,6 @@ const pageTitle = title ?? "Jorge Serrano - Software Engineer";
         <main class="relative">
             <slot />
         </main>
-
-        <SctrollToTop />
         <Footer />
     </body>
 </html>

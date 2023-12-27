@@ -66,11 +66,12 @@
 /* ===== Custom CSS ===== */
 * {
     box-sizing: border-box;
-    font-family: 'Onest Variable', sans-serif;
+    font-family: 'Onest Variable', sans-serif !important;
 }
 
 html,
 body {
+    width: 100%;
     scroll-behavior: smooth;
     color: #fff;
 }
