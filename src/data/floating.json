@@ -1,0 +1,30 @@
+[
+	{
+		"href": "https://github.com/JorgeSerrano26",
+		"icon": "github",
+		"ariaLabel": "link to jorge serrano github",
+		"download": false,
+		"disabled": false
+	},
+	{
+		"href": "https://twitch.tv/jorgeserrdev",
+		"icon": "twitch",
+		"ariaLabel": "link to jorge serrano twitch",
+		"download": false,
+		"disabled": false
+	},
+	{
+		"href": "https://www.linkedin.com/in/jorge-serrano-a6b627162/",
+		"icon": "linkedin",
+		"ariaLabel": "link to jorge serrano linkedin",
+		"download": false,
+		"disabled": false
+	},
+	{
+		"href": "/jorge_serrano_cv.pdf",
+		"icon": "file",
+		"ariaLabel": "download jorge serrano cv",
+		"download": false,
+		"disabled": false
+	}
+]

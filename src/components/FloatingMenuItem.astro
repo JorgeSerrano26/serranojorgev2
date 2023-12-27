@@ -1,0 +1,49 @@
+---
+const Icons = {
+    github: "github",
+    linkedin: "linkedin",
+    twitch: "twitch",
+    download: "file",
+};
+
+export type Icon = keyof typeof Icons;
+
+type Props = {
+    icon: Icon;
+    ariaLabel: string;
+    href: string;
+    disabled: boolean;
+    download: boolean;
+};
+
+const { icon, ariaLabel, href, disabled, download } = Astro.props;
+
+const iconSrc = `/icons/${icon}.svg`;
+
+const styles = [
+    "flex flex-col p-2 flex bg-gray-50 flex justify-center items-center text-center",
+    {
+        "cursor-not-allowed text-gray-300 pointer-events-none": disabled,
+        "text-gray-900 hover:text-gray-50 hover:bg-gray-300 transition duration-300 ease-in-out":
+            !disabled,
+    },
+];
+---
+
+<a
+    class:list={styles}
+    aria-label={ariaLabel}
+    href={href}
+    rel="noreferrer"
+    target={download ? "_self" : "_blank"}
+    download={download}
+>
+    <img src={iconSrc} alt={ariaLabel} width="20" height="20" />
+    {
+        disabled && (
+            <span class="text-xs" aria-label={ariaLabel}>
+                soon
+            </span>
+        )
+    }
+</a>
