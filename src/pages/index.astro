@@ -1,0 +1,95 @@
+---
+import "@fontsource-variable/onest";
+import FloatingMenu from "../components/FloatingMenu.astro";
+import Projects from "../components/Projects.astro";
+import Timeline from "../components/Timeline.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <div id="home" class="top-0 left-0 w-100 h-screen pt-20 relative">
+        <div
+            class="container m-auto grid grid-rows-3 md:grid-rows-1 grid-cols-1 md:grid-cols-2 place-items-center"
+        >
+            {/* INFO */}
+            <div class="grid grid-rows-2 md:grid-rows-3 col-start-1">
+                <div class="place row-start-1 row-end-4">
+                    <h1
+                        class="text-6xl font-semibold mb-2 d-inline text-center"
+                    >
+                        JORGE SERRANO
+                    </h1>
+                    <div class="flex justify-center mt-10">
+                        <a
+                            href="/jorge_serrano_cv.pdf"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            download
+                        >
+                            Download cv
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {/* IMAGE */}
+            <section
+                class="flex justify-center relative md:col-start-2 row-start-2 row-end-4 md:row-start-1 md:row-end-1"
+            >
+                <img
+                    src="/me.webp"
+                    width={698}
+                    height={766}
+                    class="w-[70%] md:w-full"
+                    alt="Jorge Serrano"
+                    fetch-priority="high"
+                />
+            </section>
+        </div>
+        {/* WAVES */}
+        <div class="relative hidden md:block">
+            <div class="absolute left-0 top-[-400px]">
+                <img
+                    src="/home-purple.svg"
+                    fetch-priority="high"
+                    width={271}
+                    height={688}
+                    alt="Home purple XPR home"
+                />
+            </div>
+            <div class="absolute right-0 opacity-40">
+                <img
+                    src="/home-green.svg"
+                    width={271}
+                    fetch-priority="high"
+                    height={688}
+                    alt="Home green XPR home"
+                />
+            </div>
+        </div>
+    </div>
+    <section id="experience">
+        <div class="w-[70%] md:w-60% max-w-screen-md m-auto pt-20 pb-20">
+            <div class="text-center">
+                <h2
+                    class={`inline-block z-10 relative text-5xl md:text-7xl lg:text-9xl font-bold mb-10 bg-clip-text tracking-1 text-gray-300`}
+                >
+                    Experience
+                </h2>
+            </div>
+            <Timeline />
+        </div>
+    </section>
+    <section>
+        <div class="w-[70%] md:w-60% max-w-screen-md m-auto pt-20 pb-20">
+            <div class="text-center">
+                <h2
+                    class={`inline-block z-10 relative text-5xl md:text-7xl lg:text-9xl font-bold mb-10 bg-clip-text tracking-1 text-gray-300`}
+                >
+                    Projects
+                </h2>
+            </div>
+            <Projects />
+        </div>
+    </section>
+
+    <FloatingMenu />
+</Layout>

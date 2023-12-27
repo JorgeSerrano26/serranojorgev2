@@ -1,0 +1,19 @@
+---
+
+---
+
+<button
+    id="scrollToTop"
+    type="button"
+    class="text-white bg-blue-700 font-medium rounded-md text-sm p-2.5 text-center mr-2 mb-2 fixed right-1 z-50 shadow-sm"
+>
+    <img src="/arrow_up.svg" alt="Arrow up" width="20" height="20" />
+</button>
+
+<script>
+    const scrollToTop = document.getElementById("scrollToTop");
+
+    scrollToTop?.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>

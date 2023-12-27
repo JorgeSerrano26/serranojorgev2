@@ -1,0 +1,22 @@
+---
+import floating from "../data/floating.json";
+import FloatingMenuItem, { type Icon } from "./FloatingMenuItem.astro";
+---
+
+<div
+    class="flex flex-col overflow-hidden z-30 w-18 bg-gray-50 rounded-r-md justify-center align-middle fixed top-[50%] translate-y-[-50%] shadow-md"
+>
+    {
+        floating.map((el) => {
+            return (
+                <FloatingMenuItem
+                    icon={el.icon as Icon}
+                    ariaLabel={el.ariaLabel}
+                    href={el.href}
+                    disabled={el.disabled}
+                    download={el.download}
+                />
+            );
+        })
+    }
+</div>
