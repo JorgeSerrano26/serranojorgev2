@@ -29,7 +29,7 @@ type Tag = {
 
 {
     projects.map(({ image, title, description, tags, link }: Project) => (
-        <article class="w-full mb-5">
+        <article class="w-full mb-5 transform">
             <a href={link} target="_blank" rel="noopener noreferrer">
                 <h3 class="text-2xl font-semibold text-violet-200 mb-2 underline">{title}</h3>
                 </a>
@@ -49,10 +49,32 @@ type Tag = {
             -->
             <img
                 loading="lazy"
-                class="rounded shadow-2xl shadow-white/10"
+                class="rounded shadow-2xl shadow-white/10 project-image"
                 src={`/projects/${image}.webp`}
                 alt={`Captura de pantalla del proyecto ${image}`}
             />
         </article>
     ))
 }
+
+<style>
+    @keyframes show {
+        from {
+            opacity: 0;
+            scale: 30%;
+        }
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+    }
+    .project-image {
+
+        view-timeline-name: --project;
+        view-timeline-axis: block;
+        animation-name: show;
+        animation-timeline: --project;
+        animation-range: entry 30% cover 50%;
+        animation-fill-mode: both;
+    }
+</style>
