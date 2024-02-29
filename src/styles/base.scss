@@ -75,3 +75,10 @@ body {
     scroll-behavior: smooth;
     color: #fff;
 }
+
+.section-title {
+    background-image: linear-gradient(to right, #b102d9, #9b13bf, #8619a6, #711c8d, #5e1c75);
+    background-size: 150%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
