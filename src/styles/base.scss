@@ -81,4 +81,17 @@ body {
     background-size: 150%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    &:after {
+        content: '';
+        width: 50px;
+        height: 10px;
+        display: block;
+        background-image: inherit;
+        border-radius: 5px px;
+        position: absolute;
+        left: 50%;
+        top: 130%;
+        transform: translateX(-50%);
+    }
 }
