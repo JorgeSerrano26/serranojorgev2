@@ -75,3 +75,23 @@ body {
     scroll-behavior: smooth;
     color: #fff;
 }
+
+.section-title {
+    background-image: linear-gradient(to right, #b102d9, #9b13bf, #8619a6, #711c8d, #5e1c75);
+    background-size: 150%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /*&:after {
+        content: '';
+        width: 50px;
+        height: 10px;
+        display: block;
+        background-image: inherit;
+        border-radius: 5px px;
+        position: absolute;
+        left: 50%;
+        top: 130%;
+        transform: translateX(-50%);
+    }*/
+}
