@@ -11,26 +11,31 @@ const { title } = Astro.props;
 const pageTitle = title ?? "Jorge Serrano - Software Engineer";
 ---
 
-<html lang="en">
+<html lang="en-us">
     <head>
         <meta charset="utf-8" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="generator" content={Astro.generator} />
         <meta name="title" content={pageTitle} />
+        <link rel="canonical" href="https://jorgeserrano.com.ar" />
         <meta
             name="description"
-            content="I'am developer and this is my personal page."
+            content="Portfolio of Jorge Serrano. I'm a passionate software engineer with a keen interest
+            in exploring new technologies and pushing the boundaries
+            of what's possible in the digital world. 
+            Currently working with Astro, NextJS, Tailwind, Typescript."
         />
         <meta
             name="keywords"
-            content="		developer,		portfolio,		react,		css,		scss,		kotlin,		java,		go,		docker,		senior,		semi senior,		junior,		figma,	"
+            content="software engineer, frontend, backend, fullstack, javascript, typescript, developer, portfolio,	react, next, nextjs, tailwind, astro, astrojs, css,		scss,		kotlin,		java,		go,		docker,		senior,		semi senior,		junior,		figma, web development, backend development, frontend development, web	"
         />
         <meta name="robots" content="index, follow" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="10 days" />
         <meta name="author" content="Jorge Serrano" />
+        <meta http-equiv="content-language" content="en-us" />
         <title>{pageTitle}</title>
     </head>
     <body class="relative w-screen min-h-screen bg-slate-950 overflow-x-hidden">
