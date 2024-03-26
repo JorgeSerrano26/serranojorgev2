@@ -51,6 +51,8 @@ type Tag = {
                 loading="lazy"
                 class="rounded shadow-2xl shadow-white/10 project-image"
                 src={`/projects/${image}.webp`}
+                width="732"
+                height="550"
                 alt={`Captura de pantalla del proyecto ${image}`}
             />
         </article>
@@ -69,7 +71,6 @@ type Tag = {
         }
     }
     .project-image {
-
         view-timeline-name: --project;
         view-timeline-axis: block;
         animation-name: show;
