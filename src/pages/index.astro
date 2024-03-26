@@ -1,38 +1,59 @@
 ---
 import "@fontsource-variable/onest";
 import FloatingMenu from "../components/FloatingMenu.astro";
+import Link from "../components/Link.astro";
 import Projects from "../components/Projects.astro";
 import Timeline from "../components/Timeline.astro";
 import Layout from "../layouts/Layout.astro";
+
+import experience from "../data/experience.json";
+
+const lastPosition = experience.at(0)!.position;
+
+export const prerender = true;
 ---
 
 <Layout>
-    <div id="home" class="top-0 left-0 w-100 min-h-screen pt-20 relative">
+    <div
+        id="home"
+        class="top-0 left-0 w-100 xl:min-h-screen pt-10 md:pt-20 relative"
+    >
         <div
-            class="container m-auto grid grid-rows-3 md:grid-rows-1 grid-cols-1 md:grid-cols-2 place-items-center"
+            class="container m-auto grid md:grid-rows-1 grid-cols-1 md:grid-cols-2 place-items-center"
         >
             {/* INFO */}
             <div class="grid grid-rows-2 md:grid-rows-3 col-start-1">
-                <div class="place row-start-1 row-end-4">
+                <div class="place row-start-1 row-end-4 mb-10 md:mb-0">
                     <h1
                         class="text-6xl font-semibold mb-2 d-inline text-center"
                     >
                         JORGE SERRANO
                     </h1>
+                    <p
+                        class="text-xl text-center mb-2 text-purple-600 font-semibold"
+                    >
+                        {lastPosition}
+                    </p>
+                    <p
+                        class="max-w-sm md:max-w-md text-lg text-center m-auto text-gray-300"
+                    >
+                        I'm a passionate software developer with a keen interest
+                        in exploring new technologies and pushing the boundaries
+                        of what's possible in the digital world.
+                    </p>
                     <div class="flex justify-center mt-10">
-                        <a
+                        <Link
+                            download="jorge_serrano_cv"
                             href="/jorge_serrano_cv.pdf"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                            download
                         >
                             Download cv
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
             {/* IMAGE */}
             <section
-                class="flex justify-center relative md:col-start-2 row-start-2 row-end-4 md:row-start-1 md:row-end-1"
+                class="flex justify-center relative md:col-start-2 md:row-start-1 md:row-end-1"
             >
                 <img
                     src="/me.webp"
