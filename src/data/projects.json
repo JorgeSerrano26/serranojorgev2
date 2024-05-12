@@ -1,6 +1,6 @@
 [
     {
-        "title": "Panna Helados", 
+        "title": "Panna Helados",
         "image": "panna",
         "description": "Panna Helados is an ice cream parlor located in Buenos Aires. On this page you can see the tastes of ice cream and generate your order, and send it to whatsapp. The back office of this application, allows you to manage the tastes and products and their price.",
         "productive": true,
@@ -8,11 +8,19 @@
         "link": "https://pannahelados.com.ar/"
     },
     {
-        "title": "Hogar Center", 
+        "title": "Hogar Center",
         "image": "hogarcenter",
         "description": "Hogar center is a website where you can see a large catalog of a furniture store located in Argentina. The system includes an administrator of publications and categories.",
         "productive": true,
         "altImg": "Hogar Center Web Page",
         "link": "https://hogarcenter.com.ar/"
+    },
+    {
+        "title": "Nol Services",
+        "image": "nol",
+        "description": "Simple landing page about Nol Services, and the services they offer.",
+        "productive": true,
+        "altImg": "Nol Services Web Page",
+        "link": "https://nolservices.com.ar/"
     }
 ]
