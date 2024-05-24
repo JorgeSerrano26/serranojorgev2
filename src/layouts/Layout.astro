@@ -20,10 +20,7 @@ const pageTitle = title ?? "Jorge Serrano - Software Engineer";
         <link rel="canonical" href="https://jorgeserrano.com.ar" />
         <meta
             name="description"
-            content="Portfolio of Jorge Serrano. I'm a passionate software engineer with a keen interest
-            in exploring new technologies and pushing the boundaries
-            of what's possible in the digital world. 
-            Currently working with Astro, NextJS, Tailwind, Typescript."
+            content="Portfolio of Jorge Serrano, a software engineer at MercadoLibre and freelance. Passionate about exploring new technologies and digital innovation."
         />
         <meta
             name="keywords"
@@ -36,7 +33,27 @@ const pageTitle = title ?? "Jorge Serrano - Software Engineer";
         <meta name="author" content="Jorge Serrano" />
         <meta http-equiv="content-language" content="en-us" />
         <title>{pageTitle}</title>
-    </head>
+
+        <!--
+            OG
+         -->
+        <meta property="og:type" content="business.business" />
+        <meta property="og:title" content="Jorge Serrano - Software Engineer" />
+        <meta property="og:url" content="https://jorgeserrano.com.ar" />
+        <meta
+            property="og:image"
+            content="https://jorgeserrano.com.ar/favicon.ico"
+        />
+        <meta
+            property="og:description"
+            content="Portfolio of Jorge Serrano, a software engineer at MercadoLibre and freelance. Passionate about exploring new technologies and digital innovation."
+        />
+        <meta
+            name="twitter:card"
+            content="Portfolio of Jorge Serrano, a software engineer at MercadoLibre and freelance. Passionate about exploring new technologies and digital innovation."
+        /></head
+    >
+
     <body class="relative w-screen min-h-screen bg-[#0c0c0c] overflow-x-hidden">
         <main class="relative">
             <slot />
