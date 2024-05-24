@@ -1,13 +1,13 @@
 ---
+import FloatingMenu from "@/components/FloatingMenu.astro";
+import Link from "@/components/Link.astro";
+import Projects from "@/components/Projects.astro";
+import Timeline from "@/components/Timeline.astro";
+import Layout from "@/layouts/Layout.astro";
 import "@fontsource-variable/onest";
 import Image from "astro/components/Image.astro";
-import FloatingMenu from "../components/FloatingMenu.astro";
-import Link from "../components/Link.astro";
-import Projects from "../components/Projects.astro";
-import Timeline from "../components/Timeline.astro";
-import Layout from "../layouts/Layout.astro";
 
-import experience from "../data/experience.json";
+import experience from "@/data/experience.json";
 
 const lastPosition = experience.at(0)!.position;
 

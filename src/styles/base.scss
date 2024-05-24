@@ -1,97 +1,76 @@
-/* The integration's default injected base.css file */
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
 
-/* Firefox */
-* {
-    scrollbar-width: auto;
-    scrollbar-color: #ce19fb #ffffff;
-}
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 0 0% 3.9%;
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-    width: 12px;
-}
+      --card: 0 0% 100%;
+      --card-foreground: 0 0% 3.9%;
 
-*::-webkit-scrollbar-track {
-    background: #ffffff;
-}
+      --popover: 0 0% 100%;
+      --popover-foreground: 0 0% 3.9%;
 
-*::-webkit-scrollbar-thumb {
-    background-color: #ce19fb;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
-}
+      --primary: 0 0% 9%;
+      --primary-foreground: 0 0% 98%;
 
-::-webkit-scrollbar {
-    width: 5px;
-    height: 2px;
-}
+      --secondary: 0 0% 96.1%;
+      --secondary-foreground: 0 0% 9%;
 
-::-webkit-scrollbar-button {
-    width: 0px;
-    height: 0px;
-}
+      --muted: 0 0% 96.1%;
+      --muted-foreground: 0 0% 45.1%;
 
-::-webkit-scrollbar-thumb {
-    background: #CA19F9;
-    border: 0px none #ffffff;
-    border-radius: 50px;
-}
+      --accent: 0 0% 96.1%;
+      --accent-foreground: 0 0% 9%;
 
-::-webkit-scrollbar-thumb:hover {
-    background: #df6aff;
-}
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
 
-::-webkit-scrollbar-thumb:active {
-    background: #df6aff;
-}
+      --border: 0 0% 89.8%;
+      --input: 0 0% 89.8%;
+      --ring: 0 0% 3.9%;
 
-::-webkit-scrollbar-track {
-    background: transparent;
-    border: 0px none #ffffff;
-    border-radius: 50px;
-}
+      --radius: 0.5rem;
+    }
 
-::-webkit-scrollbar-track:hover,
-::-webkit-scrollbar-track:active {
-    background: transparent;
-}
+    .dark {
+      --background: 0 0% 3.9%;
+      --foreground: 0 0% 98%;
 
-::-webkit-scrollbar-corner {
-    background: transparent;
-}
+      --card: 0 0% 3.9%;
+      --card-foreground: 0 0% 98%;
 
-/* ===== Custom CSS ===== */
-* {
-    box-sizing: border-box;
-    font-family: 'Onest Variable', sans-serif !important;
-}
+      --popover: 0 0% 3.9%;
+      --popover-foreground: 0 0% 98%;
 
-html,
-body {
-    width: 100%;
-    scroll-behavior: smooth;
-    color: #fff;
-}
+      --primary: 0 0% 98%;
+      --primary-foreground: 0 0% 9%;
 
-.section-title {
-    background-image: linear-gradient(to right, #b102d9, #9b13bf, #8619a6, #711c8d, #5e1c75);
-    background-size: 150%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+      --secondary: 0 0% 14.9%;
+      --secondary-foreground: 0 0% 98%;
 
-    /*&:after {
-        content: '';
-        width: 50px;
-        height: 10px;
-        display: block;
-        background-image: inherit;
-        border-radius: 5px px;
-        position: absolute;
-        left: 50%;
-        top: 130%;
-        transform: translateX(-50%);
-    }*/
-}
+      --muted: 0 0% 14.9%;
+      --muted-foreground: 0 0% 63.9%;
+
+      --accent: 0 0% 14.9%;
+      --accent-foreground: 0 0% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+
+      --border: 0 0% 14.9%;
+      --input: 0 0% 14.9%;
+      --ring: 0 0% 83.1%;
+    }
+  }
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }
