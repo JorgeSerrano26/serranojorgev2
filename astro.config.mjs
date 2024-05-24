@@ -4,9 +4,13 @@ import vercel from "@astrojs/vercel/serverless";
 import robotsTxt from "astro-robots-txt";
 import { defineConfig } from 'astro/config';
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), robotsTxt(), sitemap()],
+  integrations: [tailwind({
+    applyBaseStyles: false,
+  }), robotsTxt(), sitemap(), react()],
   compilerOptions: {
     "plugins": [{
       "name": "@astrojs/ts-plugin"

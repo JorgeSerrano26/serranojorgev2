@@ -14,6 +14,6 @@
         "editor.defaultFormatter": "rome.rome"
     },
     "[typescriptreact]": {
-        "editor.defaultFormatter": "rome.rome"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     }
 }

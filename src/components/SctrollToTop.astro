@@ -1,14 +1,16 @@
 ---
-
+import { ArrowUp } from "lucide-react";
 ---
 
-<button
-    id="scrollToTop"
-    type="button"
-    class="text-white bg-blue-700 font-medium rounded-md text-sm p-2.5 text-center mr-2 mb-2 fixed right-1 z-50 shadow-sm"
->
-    <img src="/arrow_up.svg" alt="Arrow up" width="20" height="20" />
-</button>
+<div class="absolute top-[120vh] bottom-1 right-4 md:right-8">
+    <button
+        id="scrollToTop"
+        type="button"
+        class="bg-slate-50 font-medium rounded-md text-sm p-2.5 text-center sticky top-[93vh] z-50 shadow-sm group"
+    >
+        <ArrowUp className="group-hover:-translate-y-1 transition-transform" />
+    </button>
+</div>
 
 <script>
     const scrollToTop = document.getElementById("scrollToTop");
