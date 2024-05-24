@@ -1,57 +1,22 @@
 ---
 import FloatingMenu from "@/components/FloatingMenu.astro";
 import Projects from "@/components/Projects.astro";
+import SctrollToTop from "@/components/SctrollToTop.astro";
 import Timeline from "@/components/Timeline.astro";
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/sections/Hero.astro";
 import "@fontsource-variable/onest";
 
 export const prerender = true;
-
-const links = [
-    {
-        label: "Experience",
-        href: "#experience",
-    },
-    {
-        label: "Technologies",
-        href: "#technologies",
-    },
-    {
-        label: "Projects",
-        href: "#projects",
-    },
-];
 ---
 
 <Layout>
-    <div class="flex justify-center mt-5">
-        <nav
-            class="border shadow-sm shadow-white border-slate-50 bg-slate-50 rounded-[100px] inline-block"
-        >
-            <ul class="flex">
-                {
-                    links.map(({ label, href }) => (
-                        <li class="[&:not(:last-child)]:border-r border-slate-200">
-                            <a
-                                class="py-1 px-3 block uppercase text-sm transition-colors hover:text-purple-600 font-semibold text-slate-800"
-                                href={href}
-                            >
-                                {label}
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
-        </nav>
-    </div>
-
     <Hero />
     <section id="experience">
-        <div class="w-[70%] md:w-60% max-w-screen-md m-auto pt-20 pb-20">
+        <div class="container max-w-screen-md m-auto pt-20 pb-20">
             <div class="text-center">
                 <h2
-                    class={`inline-block z-10 relative text-5xl md:text-7xl lg:text-9xl font-bold mb-10 bg-clip-text section-title text-slate-50`}
+                    class={`inline-block z-10 relative text-5xl md:text-7xl lg:text-9xl font-bold mb-14 bg-clip-text section-title text-slate-50`}
                 >
                     Experience
                 </h2>
@@ -60,10 +25,10 @@ const links = [
         </div>
     </section>
     <section id="projects">
-        <div class="w-[70%] md:w-60% max-w-screen-md m-auto pt-20 pb-20">
+        <div class="container max-w-screen-md m-auto pt-20 pb-20">
             <div class="text-center">
                 <h2
-                    class="inline-block z-10 relative text-5xl md:text-7xl lg:text-9xl font-bold mb-10 bg-clip-text section-title text-slate-50"
+                    class="inline-block z-10 relative text-5xl md:text-7xl lg:text-9xl font-bold mb-14 bg-clip-text section-title text-slate-50"
                 >
                     Projects
                 </h2>
@@ -72,4 +37,5 @@ const links = [
         </div>
     </section>
     <FloatingMenu />
+    <SctrollToTop />
 </Layout>
