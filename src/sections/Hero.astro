@@ -1,0 +1,87 @@
+---
+import { Button, buttonVariants } from "@/components/ui/button";
+import "@fontsource-variable/onest";
+import Image from "astro/components/Image.astro";
+
+import GithubIcon from "@/components/icons/Github.tsx";
+import experience from "@/data/experience.json";
+import { Download } from "lucide-react";
+import type { SVGProps } from "react";
+
+const Icons: Record<string, (props: SVGProps<SVGSVGElement>) => JSX.Element> = {
+    github: GithubIcon,
+};
+
+const socialMedia = [
+    {
+        icon: "github",
+        href: "https://github.com/JorgeSerrano26",
+    },
+];
+
+const lastPosition = experience.at(0)!.position;
+---
+
+<section
+    id="home"
+    class="w-[70%] md:w-60% max-w-screen-md m-auto grid gap-y-4 lg:grid-cols-5 place-items-center pt-20"
+>
+    <div class="lg:col-start-1 lg:col-end-4">
+        <h1
+            class="text-5xl font-semibold mb-2 d-inline text-center text-slate-50"
+        >
+            JORGE SERRANO
+        </h1>
+        <h2 class="text-xl text-center mb-2 text-purple-600 font-semibold">
+            {lastPosition}
+        </h2>
+        <p
+            class="max-w-sm md:max-w-md text-lg text-center m-auto text-gray-300"
+        >
+            I'm a passionate software developer with an <b
+                >+3 years of experience
+            </b>. I have a keen interest in exploring new technologies and
+            pushing the boundaries of what's possible in the digital world.
+        </p>
+        <div class="flex justify-center mt-10">
+            <Button asChild
+                ><a
+                    class={buttonVariants({ variant: "outline" })}
+                    download="jorge_serrano_cv"
+                    href="/jorge_serrano_cv.pdf"
+                >
+                    <Download className="mr-2" width={16} height={16} />
+                    Download cv
+                </a></Button
+            >
+        </div>
+        <div class="flex items-center md:gap-3 gap-6">
+            {
+                socialMedia.map((info) => {
+                    const Icon = Icons[info.icon];
+
+                    return (
+                        <a
+                            href={info.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="w-10 h-10 p-2 cursor-pointer flex justify-center items-center bg-black-200 rounded-full border border-black-300"
+                        >
+                            <Icon fill="white" />
+                        </a>
+                    );
+                })
+            }
+        </div>
+    </div>
+    <div class="flex justify-center relative lg:col-start-4 lg:col-end-6">
+        <Image
+            src="/me.webp"
+            class="rounded-full"
+            width={200}
+            height={200}
+            alt="Jorge Serrano"
+            loading="eager"
+        />
+    </div>
+</section>

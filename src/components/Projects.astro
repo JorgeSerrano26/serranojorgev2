@@ -1,81 +1,67 @@
 ---
+import { Image } from "astro:assets";
+import { SquareArrowOutUpRight } from "lucide-react";
 import projects from "../data/projects.json";
-
-const TAGS = {
-    NEXT: {
-        name: "Next.js",
-        class: "bg-black text-white",
-    },
-    TAILWIND: {
-        name: "Tailwind CSS",
-        class: "bg-[#003159] text-white",
-    },
-};
+import { Badge } from "./ui/badge";
+import { Button, buttonVariants } from "./ui/button";
 
 type Project = {
-    image: string,
-    title: string,
-    description: string,
-    tags?: Tag[],
-    link: string
-}
-
-
-type Tag = {
-    class: string,
-    name: string
-}
+    image: string;
+    title: string;
+    description: string;
+    tags?: string[];
+    link: string;
+};
 ---
 
-{
-    projects.map(({ image, title, description, tags, link }: Project) => (
-        <article class="w-full mb-5 transform">
-            <a href={link} target="_blank" rel="noopener noreferrer">
-                <h3 class="text-2xl font-semibold text-violet-200 mb-2 underline">{title}</h3>
-                </a>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            <!--  <ul class="flex gap-x-2 flex-row mb-2">
-                {tags?.map((tag: Tag) => (
-                    <li>
-                        <span
-                            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
-                        >
-                            <tag.icon class="size-4" />
-                            {tag.name}
-                        </span>
-                    </li>
-                ))}
-            </ul>
-            -->
-            <img
-                loading="lazy"
-                class="rounded shadow-2xl shadow-white/10 project-image"
-                src={`/projects/${image}.webp`}
-                width="732"
-                height="550"
-                alt={`Captura de pantalla del proyecto ${image}`}
-            />
-        </article>
-    ))
-}
+<div class="flex flex-col gap-5">
+    {
+        projects.map(({ image, title, description, tags, link }: Project) => (
+            <article class="w-full transform gap-5 lg:gap-0 grid lg:grid-cols-2 bg-slate-100 rounded-lg p-5">
+                <div class="flex flex-col px-2">
+                    <h3 class="text-2xl font-semibold text-slate-950 transition-colors mb-2">
+                        {title}
+                    </h3>
+                    <ul class="flex gap-x-2 flex-row mb-2">
+                        {tags?.map((tag) => (
+                            <li>
+                                <Badge>{tag}</Badge>
+                            </li>
+                        ))}
+                    </ul>
+                    <p class="text-lg text-pretty text-slate-950 grow mb-4">
+                        {description}
+                    </p>
 
-<style>
-    @keyframes show {
-        from {
-            opacity: 0;
-            scale: 30%;
-        }
-        to {
-            opacity: 1;
-            scale: 100%;
-        }
+                    <Button asChild>
+                        <a
+                            class:list={[buttonVariants(), "self-start"]}
+                            download="jorge_serrano_cv"
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Go to site{" "}
+                            <SquareArrowOutUpRight
+                                className="ml-2"
+                                width={16}
+                                height={16}
+                            />
+                        </a>
+                    </Button>
+                </div>
+
+                <div>
+                    <Image
+                        loading="lazy"
+                        class="rounded shadow-2xl shadow-white/10"
+                        src={`/projects/${image}.webp`}
+                        width="732"
+                        height="550"
+                        alt={`Captura de pantalla del proyecto ${image}`}
+                    />
+                </div>
+            </article>
+        ))
     }
-    .project-image {
-        view-timeline-name: --project;
-        view-timeline-axis: block;
-        animation-name: show;
-        animation-timeline: --project;
-        animation-range: entry 30% cover 50%;
-        animation-fill-mode: both;
-    }
-</style>
+</div>
