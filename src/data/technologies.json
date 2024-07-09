@@ -1,74 +1,62 @@
-{
-	"learned": [
-		{
-			"name": "Javascript",
-			"logo": "javascript.webp"
-		},
-		{
-			"name": "Typescript",
-			"logo": "typescript.webp"
-		},
-		{
-			"name": "Jest",
-			"logo": "jest.webp"
-		},
-		{
-			"name": "HTML",
-			"logo": "html.webp"
-		},
-		{
-			"name": "SCSS",
-			"logo": "sass.webp"
-		},
-		{
-			"name": "React",
-			"logo": "react.webp"
-		},
-		{
-			"name": "Next JS",
-			"logo": "nextjs.webp"
-		},
-		{
-			"name": "Node JS",
-			"logo": "node.webp"
-		},
-		{
-			"name": "Express JS",
-			"logo": "express.webp"
-		},
-		{
-			"name": "Github",
-			"logo": "github.webp"
-		},
-		{
-			"name": "React Testing Library",
-			"logo": "react-testing.webp"
-		},
-		{
-			"name": "React Redux",
-			"logo": "redux.webp"
-		}
-	],
-	"learning": [
-		{
-			"name": "Nest JS",
-			"logo": "nestjs.webp"
-		},
-		{
-			"name": "Golang",
-			"logo": "golang.webp"
-		},
-		{
-			"name": "Java",
-			"logo": "java.webp"
-		},
-		{
-			"name": "Kotlin",
-			"logo": "kotlin.webp"
-		},
-		{
-			"name": "Tailwind",
-			"logo": "tailwind.webp"
-		}
-	]
-}
+[
+	{
+		"name": "Javascript",
+		"logo": "javascript.webp"
+	},
+	{
+		"name": "Typescript",
+		"logo": "typescript.webp"
+	},
+	{
+		"name": "Jest",
+		"logo": "jest.webp"
+	},
+	{
+		"name": "HTML",
+		"logo": "html.webp"
+	},
+	{
+		"name": "SCSS",
+		"logo": "sass.webp"
+	},
+	{
+		"name": "React",
+		"logo": "react.webp"
+	},
+	{
+		"name": "Node",
+		"logo": "node.webp"
+	},
+	{
+		"name": "Express",
+		"logo": "express.webp"
+	},
+	{
+		"name": "Github",
+		"logo": "github.webp"
+	},
+	{
+		"name": "React Testing Library",
+		"logo": "react-testing.webp"
+	},
+	{
+		"name": "React Redux",
+		"logo": "redux.webp"
+	},
+	{
+		"name": "Golang",
+		"logo": "golang.webp"
+	},
+	{
+		"name": "Java",
+		"logo": "java.webp"
+	},
+	{
+		"name": "Kotlin",
+		"logo": "kotlin.webp"
+	},
+	{
+		"name": "TailwindCSS",
+		"logo": "tailwind.webp"
+	}
+]
