@@ -5,7 +5,14 @@ interface Props {
     duration?: number;
     id: string;
     left?: boolean;
+    from: number;
+    to: number;
 }
+
+const technologies = await TechnologiesData.slice(
+    Astro.props.from,
+    Astro.props.to === -1 ? TechnologiesData.length + 1 : Astro.props.to,
+);
 
 const { id } = Astro.props as Props;
 ---
@@ -15,7 +22,7 @@ const { id } = Astro.props as Props;
         style={`--duration: ${Astro.props.duration}s; --animation-name: ${Astro.props.left ? "scroll_left" : "scroll_right"}` as string}
     >
         {
-            TechnologiesData.map(({ name }) => (
+            technologies.map(({ name }) => (
                 <span aria-label={name} class="whitespace-nowrap">
                     {name}
                 </span>
