@@ -11,6 +11,9 @@ dependencies:
   '@astrojs/cloudflare':
     specifier: ^10.2.6
     version: 10.2.6(astro@4.9.1)
+  '@astrojs/partytown':
+    specifier: ^2.1.3
+    version: 2.1.3
   '@astrojs/react':
     specifier: ^3.4.0
     version: 3.4.0(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)(vite@5.2.11)
@@ -197,6 +200,13 @@ packages:
       vfile: 6.0.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@astrojs/partytown@2.1.3:
+    resolution: {integrity: sha512-pkGsV6/GUTph4oLgvrpbrGnu4+9JuG8fOCzBCI2dQKtpBYQ6XAZKHrPA3evQoB5vDbfUZGVCoWe95MnSoPbVtQ==}
+    dependencies:
+      '@qwik.dev/partytown': 0.11.0
+      mrmime: 2.0.0
     dev: false
 
   /@astrojs/prism@3.1.0:
@@ -1831,6 +1841,14 @@ packages:
     dev: false
     optional: true
 
+  /@qwik.dev/partytown@0.11.0:
+    resolution: {integrity: sha512-MHime7cxj7KGrapGZ1VqLkXXq5BLNqvjNZndRJVvMkUWn92F2bsezlWW1lKDoFaKCKu2xv9LRUZL99RYOs+ccA==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+    dependencies:
+      dotenv: 16.4.7
+    dev: false
+
   /@radix-ui/react-compose-refs@1.0.1(@types/react@18.3.3)(react@18.3.1):
     resolution: {integrity: sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==}
     peerDependencies:
@@ -2854,6 +2872,11 @@ packages:
 
   /dlv@1.1.3:
     resolution: {integrity: sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==}
+    dev: false
+
+  /dotenv@16.4.7:
+    resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
+    engines: {node: '>=12'}
     dev: false
 
   /dset@3.1.3:

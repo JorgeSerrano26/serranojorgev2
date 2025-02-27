@@ -1,16 +1,16 @@
+import cloudflare from "@astrojs/cloudflare";
+import partytown from "@astrojs/partytown";
+import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from '@astrojs/tailwind';
 import robotsTxt from "astro-robots-txt";
 import { defineConfig } from 'astro/config';
-import react from "@astrojs/react";
-
-import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind({
     applyBaseStyles: false
-  }), robotsTxt(), sitemap(), react()],
+  }), robotsTxt(), sitemap(), react(), partytown()],
   compilerOptions: {
     "plugins": [{
       "name": "@astrojs/ts-plugin"
